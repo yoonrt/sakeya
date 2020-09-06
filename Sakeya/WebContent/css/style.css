@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+/* body{padding: 50px;} */
+/* /* .wrapper{ margin: 0 auto; width: 1024px; pdding-bottom:10px;}  */
+* /
+	/* .product_list { width: 1024px; margin-left: -20px;} */
+	/* .product_list li { float: left; margin: 0 20px 20px 0; position: relative; width:200px; height: 300px; border:1px solid #d9d9d9;} */
+	/* .product_list li:hover { border-color:#333333;} */
+	/* .product_list dl { padding:374px 0 0 0;} */
+	/* .product_list dt { padding:11px 10px 14px; border-top: 1px solid #f0f0f0;} */
+	/* .product_list dt a { font-size: 16px; color: #1a1a1a;} */
+	/* .product_list .img { position: absolute; left: 0; top: 0; width: 190px; height: 250px;} */
+	/* .product_list .price { padding: 0 0 0 15px;font-size:21px; color: #1a1a1a; font-weight:bold;} */
+	/* .product_list .btm {position:absolute; left:0; bottom:0; width:100%; border-top:1px solid #f0f0f0; background: #fafafa;} */
+	/* .product_list .btm div {float:left; width: 50%; height: 30px; line-height: 30px; text-align: center; font:size 12px; color:#767676;} */
+	/* .product_list .btm div a {font-size:12px; color:#767676;}  */
+	/* .product_list .btm div a img {padding: 0 4px 0 0;} */
+	/* .product_list .btm div a {display: inline-block; padding:0 0 0 23px; height:30px; line-height:30px; font-size:12px; color:#767676;background:url(../images/ico_heart.jpg) 
+    no-repeat left;} 
+     */
+     
+     
+     body {
+	padding: 50px;
+}
+
+.product_list {
+	width: 1024px;
+	margin-left: -10px;
+} /* 전체 상품창   */
+.product_list li {
+	float: left;
+	margin: 15px;
+	position: relative;
+	width: 210px;
+	height: 260px;
+	border: none;
+	padding: 10px;
+	text-align: center;
+} /* 낱개별 상품창 */
+.product_list li:hover {
+	border-color: #333;
+} /* 클릭시 변경부분 */
+.product_list dl {
+	padding: 280px 0 0 0;
+}
+
+.product_list dt {
+	padding: 5px
+	border-top: 1px solid #f0f0f0;
+}
+
+.product_list dt a {
+	font-size: 14px;
+	color: #1a1a1a;
+}
+
+.product_list .listimg {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.product_list .listprice {
+/* 	padding: 10px 10px 10px 10px; */
+	font-size: 10px;
+	color: #1a1a1a;
+	font-weight: bold;
+}
+
+.product_list .listbtm {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	border-top: 1px solid #f0f0f0;
+	background: #fafafa;
+}
+
+.product_list .listbtm div {
+	float: left;
+	width: 50%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 12px;
+	color: #767676;
+}
+
+.product_list .listbtm div a {
+	font-size: 12px;
+	color: #767676;
+}
+
+.product_list .listbtm div a img {/* 하트 이미지 */
+	padding: 0 4px 0 0;
+} 
+.product_list .listimg a img { /* 이 */
+	text-align: center;
+	width: 210px;
+	height: 220px;
+	padding-bottom: -30px;
+}

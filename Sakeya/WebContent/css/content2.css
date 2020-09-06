@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+body{padding: 50px;}
+.wrapper{ margin: 0 auto; width: 1024px;} 
+.product_list { width: 1188px; margin-left: -20px;}
+.product_list li { float: left; margin: 0 20px 20px 0; position: relative; width:374px; height: 501px; border:1px solid #d9d9d9;}
+
+.product_list dl { padding:374px 0 0 0;}
+.product_list dt { padding:11px 10px 14px; border-top: 1px solid #f0f0f0;}
+.product_list dt a { font-size: 16px; color: #1a1a1a;}
+.product_list .btm div:hover {  border-color:#333333;}
+
+.product_list .img { position: absolute; left: 0; top: 0;}
+.product_list .price { padding: 0 0 0 15px;font-size:21px; color: #1a1a1a; font-weight:bold;}
+.product_list .btm {position:absolute; left:0; bottom:0; width:100%; border-top:1px solid #f0f0f0; background: #fafafa;}
+.product_list .btm div {float:left; width: 50%; height: 30px; line-height: 30px; text-align: center; font:size 12px; color:#767676;}
+.product_list .btm div a {font-size:12px; color:#767676;} 
+.product_list .btm div a img {padding: 0 4px 0 0;}
+
+
+/* .product_list .btm div a {display: inline-block; padding:0 0 0 23px; height:30px; line-height:30px; font-size:12px; color:#767676;background:url(../images/ico_heart.jpg) 
+    no-repeat left;} 
+     */
+     
+     

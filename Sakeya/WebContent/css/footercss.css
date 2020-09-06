@@ -1,0 +1,41 @@
+.wrapper{ margin: 0 auto; width: 1024px; pdding-bottom:10px;}
+.notifibox{
+background-color: #780101;
+}
+.notification{
+color: white;
+
+
+}
+.row p{
+line-height:7px;
+font-size: 14px;
+}
+.row h4{
+color:#B5916D;
+}
+.footnav{
+height:30px;
+
+}
+.footnav ul{
+margin-left:350px;
+}
+#instabt{
+	position:relative;
+	margin-left: 400px;
+	margin-top: 5px;
+	height: 20px;
+}	
+#facebt{
+	position:relative;
+	margin-left: px;
+	margin-top: 5px;
+	height: 20px;
+}	
+#youtubebt{
+	position:relative;
+	margin-left: px;
+	margin-top: 5px;
+	height: 20px;
+}	
