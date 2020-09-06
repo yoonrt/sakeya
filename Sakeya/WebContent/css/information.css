@@ -1,10 +1,16 @@
-@charset "EUC-KR";
+
 body{
     padding: 50px;
    
 }
+
 li{
     list-style:none;
+}
+.wrapper2{
+    margin: 0 auto;
+    width: 1024px;
+    padding-bottom: 100px;
 }
 .product_view{
     position: relative;
@@ -102,7 +108,7 @@ li{
     width:23px;
     color:transparent;
 }
-/* À§ ¾Æ·¡ È­»ìÇ¥ ÀÌ¹ÌÁö ³Ö±â, js·Î ¹öÆ° ÀÛµ¿ ½ÃÅ³°Í */
+/* ìœ„ ì•„ë˜ í™”ì‚´í‘œ ì´ë¯¸ì§€ ë„£ê¸°, jsë¡œ ë²„íŠ¼ ì‘ë™ ì‹œí‚¬ê²ƒ */
 .product_view table .length a:nth-of-type(1){
     text-align: center;
     top:0;
@@ -115,7 +121,7 @@ li{
     background:url("image/ico_down.png") no-repeat center;
   }
 
-  /* select ¹Ú½º È­»ìÇ¥ Áö¿ì°í, ÀÌ¹ÌÁö È­»ìÇ¥ ³Ö±â  */
+  /* select ë°•ìŠ¤ í™”ì‚´í‘œ ì§€ìš°ê³ , ì´ë¯¸ì§€ í™”ì‚´í‘œ ë„£ê¸°  */
 .product_view table select {
     background:url("image/ico_select.png") no-repeat right 11px center;
     width:100%;
@@ -144,7 +150,7 @@ li{
 .product_view .putinbusket{
 
 }
-/* ±¸¸ÅÇÏ±â ¹öÆ° */
+/* êµ¬ë§¤í•˜ê¸° ë²„íŠ¼ */
 .product_view .btns .buyit{
         display: inline-block;
         border-radius: 4px;
@@ -186,7 +192,7 @@ li{
         opacity: 1;
         right: 0;
       }
-        /* Àå¹Ù±¸´Ï ¹öÆ° */
+        /* ì¥ë°”êµ¬ë‹ˆ ë²„íŠ¼ */
       .product_view .btns .putinbusket{
         display: inline-block;
         border-radius: 4px;

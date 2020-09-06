@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+        <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %> 
+   
 <!DOCTYPE html>
 <html>
 <head>
@@ -64,13 +67,17 @@
         </script>
 </head>
 <body>
-    <style>
-        
-    </style>
-    <div class ="product_view">
+  <%@ include file ="header.jsp" %>
+	<%@ include file ="navigation.jsp" %>
+	<div class ="wrapper2">
+    <div class ="product_view ">
+    <form method ="post" name ="formm">
+    <a href=
+	"SakeyaServlet?command=product_detail&pseq=${productVO.pseq}"> 
         <h2>
-            일본 청주 시즈오카 산(DB 상품명)
+          ${productVO.name }
         </h2>
+        </a>
         <table>
             <caption>
                 <details class ="hide">
@@ -85,11 +92,11 @@
             <tbody>
                 <tr>
                     <th>판매가격</th>
-                    <td class="productprice">30,000(DB 판매가격)</td>
+                    <td class="productprice">${productVO.price2 } 원</td>
                 </tr>
                 <tr>
                     <th>상품코드</th>
-                    <td>KOSEA2019(DB 상품코드)</td>
+                    <td>${productVO.pseq }</td>
                 </tr>
                 <tr>
                     <th>브랜드</th>
@@ -104,6 +111,10 @@
                         <a href="#a">감소</a>
                     </div>
                     </td>
+                    <th>
+                    <input type="hidden" name="pseq"
+ value="${productVO.pseq}"><br>
+ </th>
                 </tr>
                 <tr>
                     <th>사용가능쿠폰</th>
@@ -124,24 +135,33 @@
                 </tr>
                 <tr>
                     <th>결제금액</th>
-                    <td class =sumprice><b>39,000원(가격+옵션)</b></td>
+                    <td class =sumprice><b>39,000원(가격+옵션)   </b></td>
                 </tr>
             </tbody>
         </table>
         <div class ="productimg img-magnifier-container">
-            <img id="myimage" class="target" src ="image/sake1.jpg">
+            <img id="myimage" class="target" src ="image/${productVO.image }">
             <ul >
                 <li class= on><a href="#a"><img id = "smallimg" src ="image/sake1.jpg" alt=""></a></li>
                 <li class=on><a href="#a"><img id = "smallimg2" src ="image/sake1.jpg" alt=""></a></li>
             </ul>
         </div>
         <div class ="btns">
-            <a class ="putinbusket" href ="#a"><span>장바구니</span></a>
-            <a class ="buyit" href ="#a"><span>구매하기</span></a>
+            <button type= "submit" class ="putinbusket" href ="#a"><span>장바구니</span></a>
+            <button type= "submit" class ="buyit" href ="#a"><span>구매하기</span></a>
         </div>
+        </form>
+    </div>
     </div>
     <script>
         /* Initiate Magnify Function
         with the id of the image, and the strength of the magnifier glass:*/
         magnify("myimage", 2);
         </script>
+        <%@ include file ="footer.jsp" %>
+        <c:out value ="${param.pseq }"/>
+   </body>
+   
+</html>
+
+        
