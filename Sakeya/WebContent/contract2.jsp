@@ -17,7 +17,6 @@ article h2 {
 	text-align: center;
 }
 </style>
-
 </head>
 <body>
 	<%@ include file="header.jsp"%>
@@ -25,9 +24,10 @@ article h2 {
 	<div class="wrapper">
 		<article>
 			<br>
-		
+			<h2>Join Us</h2>
 			<hr style="border: dashed 5px; width: 50%;">
-			<form id="join" action="SakeyaServlet?command=join_form" method="post" name="formm">
+			<form id="join" action="SakeyaServlet?command=join_form"
+				method="post" name="formm">
 				<p class="explanation">
 					언제나 새로운 즐거움이 가득한 Sakeya의 회원가입 페이지 입니다. <br> Sakeya의 회원가입은
 					무료이며, 회원님의 개인신상에 관한 정보는 ‘정보통신망이용촉진 및 정보보호등에관한법률’에 의해 회원님의 동의없이 제
@@ -212,34 +212,14 @@ article h2 {
 				<br>
 				<br>
 				<div style="text-align: center;">
-				<input type="checkbox" name="okon1" id="chk1"> 약관동의
-					&nbsp; &nbsp; &nbsp; 
-					
+					<input type="radio" name="okon1" checked> 동의함 &nbsp; &nbsp;
+					&nbsp; <input type="radio" name="okon1" checked> 동의안함
 				</div>
-				<input type="submit" value="Next" class="submit"  onclick="return go_next()"
-					style="text-align:center;">
-				
+				<input type="button" value="Next" class="submit" onclick="go_next()"
+					style="float: right;">
 			</form>
-			<button><a href ="SakeyaServlet?command=index">취소</a></button>
 		</article>
 	</div>
-<script type="text/javascript"> 
-function go_next() { 
-	var chkbox = document.getElementsByName('okon1'); 
-	var chk = false; for(var i=0 ; i<chkbox.length ; i++) { 
-		if(chkbox[i].checked) { chk = true; 
-		} else { chk = false; 
-		} 
-		} if(chk) { 
-			
-			return true; 
-		} else {
-			alert("모든 약관에 동의해 주세요.");
-			return false;
-			}
-		} 
-		</script>
-
 
 </body>
 </html>

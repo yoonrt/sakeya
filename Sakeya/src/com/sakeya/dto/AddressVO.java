@@ -1,13 +1,14 @@
 package com.sakeya.dto;
 
 public class AddressVO {
-    private String zipNum; 
-    private String sido; 
-    private String gugun; 
-    private String dong; 
-    private String zipCode; 
-    private String bunji;
-	public String getZipNum() {
+	private String zipNum;
+	 private String sido;
+		private String gugun;
+		 private String dong;
+		 private String zipCode;
+		 private String bunji;
+		 
+	 public String getZipNum() {
 		return zipNum;
 	}
 	public void setZipNum(String zipNum) {
@@ -43,4 +44,5 @@ public class AddressVO {
 	public void setBunji(String bunji) {
 		this.bunji = bunji;
 	}
-    }
+	
+}

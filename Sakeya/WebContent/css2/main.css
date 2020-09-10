@@ -302,6 +302,11 @@ iframe {
   width: 100%;
 }
 
+.login100-form-title .WelcomeMessage{
+	font-size: 25px;
+	color: #B06363;
+}
+
 /*---------------------------------------------*/
 .btn-show-pass {
   font-size: 15px;

@@ -11,6 +11,15 @@ public class CartVO {
 	private int quantity;
 	private int price2;
 	private Timestamp indate;
+	private String image;
+	  
+	  
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
+	}
 	public int getCseq() {
 		return cseq;
 	}

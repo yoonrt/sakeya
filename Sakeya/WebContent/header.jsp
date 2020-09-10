@@ -22,7 +22,9 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="icon" type="image/png" href="images/sake.ico">
      <script type="text/javascript" src ="js/headerjs.js">
+     
 	</script>
+	     <script type ="text/javascript" src ="js/mypage.js"></script>
 
 </head>
 <body>
@@ -40,9 +42,10 @@
 						<a href="SakeyaServlet?command=contract">회원가입</a>
 					</c:when>
 					<c:otherwise>
-						<li style="color: orange">
+						<li style="color: black">
+							<a href="SakeyaServlet?command=logout">로그아웃</a>
 							${sessionScope.loginUser.name}(${sessionScope.loginUser.id})</li>
-						<a href="SakeyaServlet?command=logout">로그아웃</a>
+						
 					</c:otherwise>
 				</c:choose>
 			</div>
@@ -68,7 +71,7 @@
                 
                 <span class ="logo-container">
                     <a href="SakeyaServlet?command=index">
-                        <img src="image/ikea.jpg"  width="130px" height="60px" 
+                        <img src="image/sakeyalogo.png"  width="230px" height="110px" 
                         onError="this.style.visibility='hidden'">
                         </a>               
                 </span>
@@ -86,7 +89,8 @@
                </div>
             </div>
             </div>
+           
         </div>
-    </div>
+
 </body>
 </html>

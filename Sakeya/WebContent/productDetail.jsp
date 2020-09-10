@@ -65,11 +65,17 @@
           }
         }
         </script>
-</head>
+        <script type ="text/javascript" src ="js/mypage.js">
+        </script>
+        </head>
 <body>
   <%@ include file ="header.jsp" %>
 	<%@ include file ="navigation.jsp" %>
-	<div class ="wrapper2">
+	
+	<div id ="container"><div id = "idx_top">
+	
+	</div></div>
+	
     <div class ="product_view ">
     <form method ="post" name ="formm">
     <a href=
@@ -106,7 +112,7 @@
                     <th>구매수량</th>
                     <td>
                         <div class="length">
-                        <input type ="number" min="1" value="1">
+                        <input type ="number" min=1 value=1 name ="quantity">
                         <a href="#a">증가</a>
                         <a href="#a">감소</a>
                     </div>
@@ -141,27 +147,33 @@
         </table>
         <div class ="productimg img-magnifier-container">
             <img id="myimage" class="target" src ="image/${productVO.image }">
-            <ul >
-                <li class= on><a href="#a"><img id = "smallimg" src ="image/sake1.jpg" alt=""></a></li>
-                <li class=on><a href="#a"><img id = "smallimg2" src ="image/sake1.jpg" alt=""></a></li>
-            </ul>
+            <input type="hidden" value="${productVO.image }" name="image">
+<%--             <input type ="text" value= "${productVO.image }" name= "image"> --%>
+<!--             <ul > -->
+<!--                 <li class= on><a href="#a"><img id = "smallimg" src ="image/sake1.jpg" alt=""></a></li> -->
+<!--                 <li class=on><a href="#a"><img id = "smallimg2" src ="image/sake1.jpg" alt=""></a></li> -->
+<!--             </ul> -->
         </div>
         <div class ="btns">
-            <button type= "submit" class ="putinbusket" href ="#a"><span>장바구니</span></a>
-            <button type= "submit" class ="buyit" href ="#a"><span>구매하기</span></a>
+        	<input type ="submit" class ="putinbusket" onclick="go_cart()">
+            <button type= "submit" class ="putinbusket" onclick="go_cart()"><span>장바구니</span></button>
+            <button type= "submit" class ="buyit" onclick="go_order()"><span>구매하기</span></button>
         </div>
         </form>
     </div>
-    </div>
+    
     <script>
         /* Initiate Magnify Function
         with the id of the image, and the strength of the magnifier glass:*/
         magnify("myimage", 2);
+        
         </script>
+        <div id ="container"><div id = "idx_bottom">
+	    </div></div>
+        
+        
         <%@ include file ="footer.jsp" %>
         <c:out value ="${param.pseq }"/>
    </body>
    
 </html>
-
-        

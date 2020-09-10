@@ -27,7 +27,8 @@ public static ProductDAO getInstance(){
  // 신상품 리스트 얻어오기 
 public ArrayList<ProductVO> listNewProduct() { 
 	ArrayList<ProductVO> productList = new ArrayList<ProductVO>(); 
-	String sql = "select * from product order by pseq desc";
+	String sql = "select * from new_pro_view";
+
 	
 	Connection conn = null; 
 	PreparedStatement pstmt = null; 
@@ -60,7 +61,7 @@ public ArrayList<ProductVO> listNewProduct() {
 
 public ArrayList<ProductVO> listBestProduct(){
 	ArrayList<ProductVO> productList = new ArrayList<ProductVO>();
-	String sql = "select * from product where bestyn ='y' order by pseq desc"; 
+	String sql = "select * from best_pro_view"; 
 	
 	Connection conn = null;
 	PreparedStatement pstmt = null; 

@@ -9,20 +9,19 @@ public class ProductVO {
     private int price1;
     private int price2;
     private int price3;
-    public String getImage() {
-		return image;
-	}
-
-	public void setImage(String image) {
-		this.image = image;
-	}
-
-	private String content;
+    private String content;
     private String image;
     private String useyn;
     private String bestyn;
     private Timestamp indate;
 
+    public String getImage() {
+  		return image;
+  	}
+
+  	public void setImage(String image) {
+  		this.image = image;
+  	}
     public int getPseq() {
         return pseq;
     }

@@ -19,11 +19,31 @@ public class ActionFactory {
 			action = new IndexAction();
 		}else if (command.equals("product_detail")) {
 			action = new ProductDetailAction();
-		}else if (command.equals("product_detail")) {
-			action = new ProductDetailAction();
 		}else if(command.equals("catagory")) {
 			action=new ProductKindAction();
+		}else if(command.equals("contract")) {
+			action=new ContractAction();
+		}else if(command.equals("join_form")) {
+			action = new JoinFormAction();
+		}else if(command.equals("id_check_form")) {
+			action = new idCheckFormAction();
+		}else if (command.equals("find_zip_num")) {
+			 action = new FindZipNumAction();
+		} else if(command.equals("join")) {
+			action = new JoinAction();
+		} else if(command.equals("login_form")) {
+			action = new LoginFormAction();
+		}else if (command.equals("login")) {
+			 action = new LoginAction();
+		}else if(command.equals("logout")) {
+			action = new LogoutAction();
 		}
+		else if (command.equals("cart_insert")) {
+			 action = new CartInsertAction();
+		}
+		else if (command.equals("cart_list")) {
+			 action = new CartListAction();
+		 }
 		
 		return action;
 	}

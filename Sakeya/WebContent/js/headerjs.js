@@ -11,7 +11,7 @@ function movefacebook(){
 function moveyoutube(){
     location.href='https://www.youtube.com/'
 }
-var i3 = document.getElementById("i3").style.visibility="visible"; 
+//var i3 = document.getElementById("i3").style.visibility="visible"; 
 function openNav() {
     document.getElementById("sideNavid").style.width = "250px";
 }

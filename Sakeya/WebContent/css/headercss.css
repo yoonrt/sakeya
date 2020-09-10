@@ -44,6 +44,8 @@ border-radius: 10px;
 overflow: hidden;
 background-color: white;
 /* transform: translate(-50%,-50%); */
+/* margin-bottom:10px; */
+padding-bottom:35px;
 }
 .headernav .search-container{
 float:right;
@@ -108,17 +110,26 @@ outline: 0;
 .search-container .searchbtn a{
 float:right;
 } */
+.headernav .sidebar-container{
+	float:left;
+	
+	margin-top:30px;
+}
 .logo-container{
 position: absolute;
 left: 50%;
 transform: translate(-50%,-0%);
 }
-.buscar-caja {
+
+.headernav .buscar-caja {
 float:right;
+margin-top: 20px;
 background: white;
 height: 60px;
 border-radius: 40px;
 padding: 10px;
+
+
 }
 
 .buscar-caja:hover > .buscar-txt {
@@ -153,13 +164,13 @@ font-size: 30px;
 color: white;
 } */
 
-.buscar-txt {
-/* border: none; */
-border-radius: 30px;;
+
+.buscar-caja .buscar-txt{
+	border-radius: 30px;;
 background: white;
 outline: none;
 float: left;
-padding: 3px;
+padding: 0px;
 color: black;
 font-size: 16px;
 transition: 0.4s;
@@ -168,6 +179,7 @@ width: 0px;
 font-weight: bold;
 border:none;
 }
+
 .sidenav {
     height: 100%;
     width: 0;
@@ -178,7 +190,7 @@ border:none;
     background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
+    padding-top: 60px;F
 }
 
 .sidenav a {
