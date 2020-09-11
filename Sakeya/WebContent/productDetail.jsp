@@ -155,7 +155,7 @@
 <!--             </ul> -->
         </div>
         <div class ="btns">
-        	<input type ="submit" class ="putinbusket" onclick="go_cart()">
+<!--         	<input type ="submit" class ="putinbusket" onclick="go_cart()"> -->
             <button type= "submit" class ="putinbusket" onclick="go_cart()"><span>장바구니</span></button>
             <button type= "submit" class ="buyit" onclick="go_order()"><span>구매하기</span></button>
         </div>

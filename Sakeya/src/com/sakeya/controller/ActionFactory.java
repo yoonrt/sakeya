@@ -43,6 +43,12 @@ public class ActionFactory {
 		}
 		else if (command.equals("cart_list")) {
 			 action = new CartListAction();
+		}else if(command.equals("cart_delete")) {
+			action = new CartDeleteAction();
+		}else if(command.equals("order_list")) {
+			action = new OrderInsertAction();
+		}else if (command.equals("order_list")) {
+			 action = new OrderListAction();
 		 }
 		
 		return action;

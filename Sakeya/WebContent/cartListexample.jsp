@@ -224,15 +224,15 @@ input:focus {
 					<c:forEach items="${cartList}" var="cartVO">
 					
 					<a href="SakeyaServlet?command=product_detail&pseq=${cartVO.pseq}">
-					
+					<input type="checkbox" name="cseq" value= "${cartVO.cseq}">
   <div class="item">
     <div class="cart-buttons">
-      <a href="#" class="delete-btn" onclick="go_cart_delete()"></a>
+      <a href="#" class="fas fa-trash-alt" onclick="go_cart_delete()"></a>
 <!--       <span class="like-btn"></span> -->
     </div>
  	<input type="hidden" name="cseq" value="${cartVO.cseq}">
     <div class="cart-image">
-     <a href="SakeyaServlet?command=product_detail&pseq=${cartVO.pseq}"> <img src ="image/${cartVO.image }.jpg" ></a>
+     <a href="SakeyaServlet?command=product_detail&pseq=${cartVO.pseq}"> <img src ="image/${cartVO.image }" ></a>
     </div>
  
     <div class="description">

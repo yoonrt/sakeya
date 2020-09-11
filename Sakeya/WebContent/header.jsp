@@ -34,7 +34,7 @@
             <div class="topnav">
       
                 <a class="active" href="SakeyaServlet?command=qna_list">고객센터</a>
-                <a href="SakeyaServlet?command=cart_list"">마이페이지</a>
+                <a href="SakeyaServlet?command=mypage">마이페이지</a>
                 <a href="SakeyaServlet?command=cart_list">장바구니</a>
 				<c:choose>
 					<c:when test="${empty sessionScope.loginUser}">
