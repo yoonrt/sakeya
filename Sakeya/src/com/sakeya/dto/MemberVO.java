@@ -12,13 +12,6 @@ public class MemberVO {
 		private String phone;
 		private String useyn;
 		private Timestamp indate;
-		private String image;
-		public String getImage() {
-			return image;
-		}
-		public void setImage(String image) {
-			this.image = image;
-		}
 		public String getId() {
 			return id;
 		}

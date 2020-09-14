@@ -199,7 +199,7 @@ li {
     </div></div>
 	
 	
-	
+		<%@ include file = "test.jsp" %>
 		<%@ include file ="footer.jsp" %>
 </body>
 </html>
