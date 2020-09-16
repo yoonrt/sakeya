@@ -16,13 +16,37 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="js/customer_service_con.js"></script>
 <script src="js/inquiry_con.js"></script>
+<style>
+.wrapper12{
+width: 1224px;
+ padding-bottom: 10px;
+ margin: 0 auto;
+}
 
+.faq_keyword {
+margin: 40px 0 0;
+width: 100%;
+height: 20px;
+padding: 12px 15px 8px;
+font-size: 13px;
+background-color: #f2f5f8;
+color: #111;
+margin-bottom: 14px;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+.list_board_sort li{
+height:46px;
+font-size:20px;
+}
+</style>
 </head>
 <body>
 
-	<%@ include file ="header.jsp" %>
-	<%@ include file ="navigation.jsp" %>
-<div class ="wrapper">
+<%-- 	<%@ include file ="header.jsp" %> --%>
+<%-- 	<%@ include file ="navigation.jsp" %> --%>
+<div class ="wrapper12">
 <div id="wrap">
 		
 		<div id="contents">
@@ -33,6 +57,8 @@
 				</h2>
 				<div class="cs_snb">
 					<ul class="list_snb">
+					<li>
+					<a href="SakeyaServlet?command=index"><strong class="tit_sub">홈</strong></a></li>
 						<li><strong class="tit_sub">자주하는 질문</strong>
 							<ul class="list_snb_sub">
 								<li class="_cat05" data-cat="05"><a
@@ -103,11 +129,12 @@
 				<div class="cs_board">
 					<h3 class="blind">자주하는 질문</h3>
 					<ul class="list_board_sort">
-						<li class="_cat5 on" data-cat="05"><a
+						<li class="_cat5 on" data-cat="05" style=""><a
 							href="SakeyaServlet?command=customer1"
 							class="link_tab _faqCategory" spcid="CUST____frqna__topic__"
 							onclick="openPage(event, '1')">배송</a>
 						</li>
+						
 						<li class="_cat02" data-cat="02"><a
 							href="SakeyaServlet?command=customer2" class="link_tab _faqCategory"
 							spcid="CUST____frqna__topic__"
@@ -117,6 +144,7 @@
 							class="link_tab _faqCategory" spcid="CUST____frqna__topic__"
 							onclick="openPage(event, '3')">반품/교환/환불</a>
 						</li>
+						<br>
 						<li class="_cat01" data-cat="01"><a
 							href="SakeyaServlet?command=customer4"
 							class="link_tab _faqCategory" spcid="CUST____frqna__topic__"
@@ -139,7 +167,7 @@
 						<div class="faq_keyword">
 							<span class="txt_keyword">배송 일정</span>
 						</div>
-
+						
 						<!-- 배송 일정 -->
 						<ul class="list_board">
 							<li class="_faqTitle" data-bbsno="111">
@@ -155,7 +183,7 @@
 									가구, 컴퓨터 등 설치 및 주문제작 상품의 경우 7~15일 정도(주말및 공휴일 제외) 소요 될 수 있습니다.<br>
 									보다 정확한 일정 확인은 [1:1문의작성] 또는 고객센터(☎1644-0000)로 문의 바랍니다. <br>
 									<br> <a
-										href="customer7_1by1.jsp"
+										href="SakeyaServlet?command=qna_write_form"
 										target="_self"> <font color="red">1:1문의작성  바로가기</font>
 									</a> 
 								</div></li>
@@ -302,7 +330,7 @@
 								<div class="cont_faq">
 									상품의 출고 오류로 인한 것이며 이 경우 당사 고객센터로 연락주시면 신속하게 처리 해 드리겠습니다.<br>
 									[1:1문의작성] 또는 고객센터로(☎1644-0000) 문의해 주세요.<br> <br> 
-									<a href="customer7_1by1.jsp"	target="_self">
+									<a href="SakeyaServlet?command=qna_write_form"	target="_self">
 									<font color="red">1:1문의작성바로가기</font></a><br>
 									
 								</div>

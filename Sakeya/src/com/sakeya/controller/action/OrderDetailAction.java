@@ -29,8 +29,13 @@ public class OrderDetailAction implements Action {
 
 			int totalPrice = 0;
 			for (OrderVO ovo : orderList) {
+				System.out.println(ovo.getPrice2());
+				System.out.println(ovo.getQuantity());
 				totalPrice += ovo.getPrice2()*ovo.getQuantity();
+				System.out.println(totalPrice);
 			}
+			
+		
 			request.setAttribute("orderDetail", orderList.get(0));
 			request.setAttribute("orderList", orderList);
 			request.setAttribute("totalprice", totalPrice);

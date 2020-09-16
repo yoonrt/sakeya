@@ -12,19 +12,16 @@ public class CartDeleteAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		
-		String url ="SakeyaServlet?command = cart_list";
-		
-		String [] cseqArr = request.getParameterValues("cseq");
-		
-		for(String cseq:cseqArr) {
-			System.out.println(cseq);
-			CartDAO cartDAO = CartDAO.getInstance();
-			cartDAO.deleteCart(Integer.parseInt(cseq));
-		}
-		
-		request.getRequestDispatcher(url).forward(request, response);		
+	String url = "SakeyaServlet?command=cart_list";
+	
+	String[] cseqArr = request.getParameterValues("cseq");
+	
+	for(String cseq:cseqArr) {
+		System.out.println(cseq);
+		CartDAO cartDAO = CartDAO.getInstance();
+		cartDAO.deleteCart(Integer.parseInt(cseq));
+	}
+		request.getRequestDispatcher(url).forward(request, response);
 	}
 
 }

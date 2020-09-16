@@ -78,11 +78,14 @@
 	
     <div class ="product_view ">
     <form method ="post" name ="formm">
+  
     <a href=
 	"SakeyaServlet?command=product_detail&pseq=${productVO.pseq}"> 
         <h2>
           ${productVO.name }
         </h2>
+        	
+        <input type ="hidden" value=1 name="identify">
         </a>
         <table>
             <caption>
@@ -98,7 +101,7 @@
             <tbody>
                 <tr>
                     <th>판매가격</th>
-                    <td class="productprice">${productVO.price2 } 원</td>
+                    <td class="productprice"><span id="ticket_price">${productVO.price2} 원</span></td>
                 </tr>
                 <tr>
                     <th>상품코드</th>
@@ -112,9 +115,7 @@
                     <th>구매수량</th>
                     <td>
                         <div class="length">
-                        <input type ="number" min=1 value=1 name ="quantity">
-                        <a href="#a">증가</a>
-                        <a href="#a">감소</a>
+                        <input id="num" oninput="calc()" type ="number" min=1 value=1 name ="quantity">                
                     </div>
                     </td>
                     <th>
@@ -130,7 +131,7 @@
                     <th>옵션선택</th>
                     <td>
                         <select>
-                            <option>기본(+0)(DB 옵션)</option>
+                            <option>기본(+0)</option>
                         </select>
                     </td>
                 </tr>
@@ -141,8 +142,9 @@
                 </tr>
                 <tr>
                     <th>결제금액</th>
-                    <td class =sumprice><b>39,000원(가격+옵션)   </b></td>
+                    <td class =sumprice><b id="total"> ${productVO.price2 }원  </b></td>
                 </tr>
+
             </tbody>
         </table>
         <div class ="productimg img-magnifier-container">
@@ -157,12 +159,31 @@
         <div class ="btns">
 <!--         	<input type ="submit" class ="putinbusket" onclick="go_cart()"> -->
             <button type= "submit" class ="putinbusket" onclick="go_cart()"><span>장바구니</span></button>
-            <button type= "submit" class ="buyit" onclick="go_order()"><span>구매하기</span></button>
+            <button type= "submit" class ="buyit" onclick="go_order_insert()"><span>구매하기</span></button>
         </div>
+    
         </form>
     </div>
     
     <script>
+    function calc() 
+    {
+      var price = document.getElementById("ticket_price").innerHTML;
+      var noTickets = document.getElementById("num").value;
+      var total = parseFloat(price) * noTickets
+      if (!isNaN(total))
+        document.getElementById("total").innerHTML = total+"원"
+    }
+    function go_cart() {
+
+    	 document.formm.action = "SakeyaServlet?command=cart_insert";
+    	 document.formm.submit();
+    	}
+    function go_order_insert() {
+    	 document.formm.action = "SakeyaServlet?command=order_insert";
+    	 document.formm.submit();
+    	}
+    
         /* Initiate Magnify Function
         with the id of the image, and the strength of the magnifier glass:*/
         magnify("myimage", 2);

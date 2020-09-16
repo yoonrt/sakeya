@@ -1,12 +1,8 @@
-function go_cart() {
-// if (document.formm.quantity.value == "") {
-// alert("수량을 입력하여 주세요.");
-// document.formm.quantity.focus();
-// } else {
- document.formm.action = "SakeyaServlet?command=cart_insert";
- document.formm.submit();
- 
-}
+//function go_cart() {
+//
+// document.formm.action = "SakeyaServlet?command=cart_insert";
+// document.formm.submit();
+//}
 function go_cart_delete() {
  var count = 0;
  if (document.formm.cseq.length == undefined) {
@@ -51,10 +47,10 @@ function go_order_delete() {
  document.formm.submit();
  }
 }
-function go_order() {
- document.formm.action = "SakeyaServlet?command=mypage";
- document.formm.submit();
-}
+//function go_order() {
+// document.formm.action = "SakeyaServlet?command=mypage";
+// document.formm.submit();
+//}
 
 	// 장바구니 수량 변경
 	

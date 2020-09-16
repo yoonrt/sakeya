@@ -21,34 +21,34 @@ public class OrderDAO {
 	}
 
 	public int insertOrder(ArrayList<CartVO> cartList, String id) {
-		int maxOseq = 0;
-		Connection conn = null;
-		PreparedStatement pstmt = null;
-		ResultSet rs;
-		try {
-			conn = DBManager.getConnection();
+		 int maxOseq = 0;
+		 Connection conn = null;
+		 PreparedStatement pstmt = null;
+		 ResultSet rs;
+		 try {
+		 conn = DBManager.getConnection();
 			String selectMaxOseq = "select max(oseq) from orders";
-			pstmt = conn.prepareStatement(selectMaxOseq);
-			rs = pstmt.executeQuery();
-			if (rs.next()) {
-				maxOseq = rs.getInt(1);
-			}
-			pstmt.close();
-			String insertOrder = "insert into orders(oseq, id) values(" + "orders_seq.nextval, ?)";
-			pstmt = conn.prepareStatement(insertOrder);
-			pstmt.setString(1, id);
-			pstmt.executeUpdate();
-			for (CartVO cartVO : cartList) {
-				insertOrderDetail(cartVO, maxOseq);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			DBManager.close(conn, pstmt);
-		}
-		return maxOseq;
-	}
-
+			 pstmt = conn.prepareStatement(selectMaxOseq);
+			 rs = pstmt.executeQuery();
+			 if (rs.next()) {
+			 maxOseq = rs.getInt(1);
+			 }
+			 pstmt.close();
+			 String insertOrder = "insert into orders(oseq, id) values(" +
+			 "orders_seq.nextval, ?)";
+			 pstmt = conn.prepareStatement(insertOrder);
+			 pstmt.setString(1, id);
+			 pstmt.executeUpdate();
+			 for (CartVO cartVO : cartList) {
+			 insertOrderDetail(cartVO, maxOseq);
+			 }
+			 } catch (Exception e) {
+			 e.printStackTrace();
+			 } finally {
+			 DBManager.close(conn, pstmt);
+			 }
+		 return maxOseq;
+	 }
 	public void insertOrderDetail(CartVO cartVO, int maxOseq) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;

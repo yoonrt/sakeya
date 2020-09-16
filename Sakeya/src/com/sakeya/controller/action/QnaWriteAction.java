@@ -32,8 +32,8 @@ public class QnaWriteAction implements Action {
 		 qnaDAO.insertqna(qnaVO, loginUser.getId());
 		 }
 		 response.sendRedirect(url);
-
 		 
+	
 	}
 
 }

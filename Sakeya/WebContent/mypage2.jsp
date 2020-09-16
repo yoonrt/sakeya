@@ -24,6 +24,12 @@
 <style>
 	.zero_1{
 		margin-left:150px;
+		
+	}
+	.mypagetable th, .mypagetable td{
+	width: 200px;
+	text-align:center;
+	
 	}
 </style>
 </head>
@@ -37,6 +43,8 @@
 					</h2>
 					<div class="cs_snb">
 						<ul class="list_snb">
+						<li>
+					<a href="SakeyaServlet?command=index"><strong class="tit_sub">홈</strong></a></li>
 							<li><strong class="tit_sub">나의 쇼핑정보</strong>
 								<ul class="list_snb_sub">
 									<li><a href="AllDelivStat.io"
@@ -140,7 +148,7 @@
 									<h3 class="tit">주문/배송조회</h3>
 									<span>(취소/교환/반품 신청)</span>
 								</div>
-							<table id="cartList">
+							<table id="cartList" class ="mypagetable">
 								<tr>
 									<th>주문일자</th>
 									<th>주문번호</th>

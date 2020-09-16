@@ -18,7 +18,7 @@ public class CartListAction implements Action{
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
-		String url ="cartListexample.jsp";
+		String url ="cartlist3.jsp";
 		
 		HttpSession session = request.getSession();
 		 MemberVO loginUser = (MemberVO) session.getAttribute("loginUser");

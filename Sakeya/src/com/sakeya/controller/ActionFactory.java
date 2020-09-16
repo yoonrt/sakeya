@@ -37,8 +37,10 @@ import com.sakeya.controller.action.OftenQuestionsAction6;
 import com.sakeya.controller.action.OrderAllAction;
 import com.sakeya.controller.action.OrderDetailAction;
 import com.sakeya.controller.action.OrderInsertAction;
+import com.sakeya.controller.action.OrderListAction;
 import com.sakeya.controller.action.ProductDetailAction;
 import com.sakeya.controller.action.ProductKindAction;
+
 import com.sakeya.controller.action.QnaListAction;
 import com.sakeya.controller.action.QnaViewAction;
 import com.sakeya.controller.action.QnaWriteAction;
@@ -89,7 +91,7 @@ public class ActionFactory {
 		}else if(command.equals("cart_delete")) {
 			action = new CartDeleteAction();
 		}else if(command.equals("order_list")) {
-			action = new OrderInsertAction();
+			action = new OrderListAction();
 		}else if (command.equals("order_insert")) {
 			 action = new OrderInsertAction();
 		 }  else if (command.equals("mypage")) {
@@ -98,7 +100,8 @@ public class ActionFactory {
 			 action = new OrderDetailAction();
 		 } else if (command.equals("order_all")) {
 			 action = new OrderAllAction();
-		 }
+		 } 
+		 
 		else if (command.equals("customer1")) {
 			 action = new OftenQuestionsAction1();
 		 }else if (command.equals("customer2")) {

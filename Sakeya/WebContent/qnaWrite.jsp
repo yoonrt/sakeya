@@ -54,23 +54,27 @@ font-size: 14px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
           box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
 }
+.qnawriteh2{
+padding_bottom:10px;
+}
 
 </style>
 	<%@ include file ="header.jsp" %>
 	<%@ include file ="navigation.jsp" %>
 	<div class ="wrapper">
 	<article>
-		<h2>1:1 고객 게시판</h2>
-		<h3>고객님의 질문에 대해서 운영자가 1:1 답변을 드립니다.</h3>
+	
+	
+		
 		<form name="formm" method="post"
 			action="SakeyaServlet?command=qna_write">
 			<fieldset>
 		
-				<legend>Qna Info</legend>
+<!-- 				<legend>Qna Info</legend> -->
 			<table class="qnabox">
 				<tr>
 				<th>
-				<label>Title</label> 
+				<label>글 제목</label> 
 				</th>
 				<td>
 				<input type="text" name="subject" size="77">
@@ -78,7 +82,7 @@ font-size: 14px;
 				</tr>
 				<tr>
 				<th>
-				<label>Content</label>
+				<label>문의내용</label>
 				</th>
 				<td>
 				<textarea class = "qnawritebox" rows="8" cols="65" name="content"></textarea>

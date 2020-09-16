@@ -12,34 +12,32 @@ import com.sakeya.dao.OrderDAO;
 import com.sakeya.dto.MemberVO;
 import com.sakeya.dto.OrderVO;
 
-public class OrderListAction implements Action{
+public class OrderListAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
+
 		String url = "orderList.jsp";
 
-		 HttpSession session = request.getSession();
-		 MemberVO loginUser = (MemberVO) session.getAttribute("loginUser");
+		HttpSession session = request.getSession();
+		MemberVO loginUser = (MemberVO) session.getAttribute("loginUser");
 
-		 if (loginUser == null) {
-		 url = "SakeyaServlet?command=login_form";
-		 } else {
-		 OrderDAO orderDAO = OrderDAO.getInstance();
-		 int oseq=Integer.parseInt(request.getParameter("oseq"));
-		 ArrayList<OrderVO> orderList =
-		orderDAO.listOrderById(loginUser.getId(), "1", oseq);
+		if (loginUser == null) {
+			url = "SakeyaServlet?command=login_form";
+		} else {
+			OrderDAO orderDAO = OrderDAO.getInstance();
+			int oseq = Integer.parseInt(request.getParameter("oseq"));
+			ArrayList<OrderVO> orderList = orderDAO.listOrderById(loginUser.getId(), "1", oseq);
 
-		 int totalPrice=0;
-		 for(OrderVO orderVO :orderList){
-		 totalPrice+=orderVO.getPrice2()*orderVO.getQuantity();
-		 }
+			int totalPrice = 0;
+			for (OrderVO orderVO : orderList) {
+				totalPrice+=orderVO.getPrice2() * orderVO.getQuantity();
+			}
 
-		 request.setAttribute("orderList", orderList);
-		 request.setAttribute("totalPrice", totalPrice);
-		 }
-		 request.getRequestDispatcher(url).forward(request, response);
+			request.setAttribute("orderList", orderList);
+			request.setAttribute("totalPrice", totalPrice);
+		}
+		request.getRequestDispatcher(url).forward(request, response);
 	}
-
 }

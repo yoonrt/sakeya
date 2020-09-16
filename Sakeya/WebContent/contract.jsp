@@ -220,7 +220,7 @@ article h2 {
 					style="text-align:center;">
 				
 			</form>
-			<button><a href ="SakeyaServlet?command=index">취소</a></button>
+<!-- 			<button><a href ="SakeyaServlet?command=index">취소</a></button> -->
 		</article>
 	</div>
 <script type="text/javascript"> 

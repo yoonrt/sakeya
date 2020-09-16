@@ -82,38 +82,38 @@ li{
 }
 .product_view table .length{
     position:relative;
-    width:71px;
+    width:50px;
     height:32px;
-    border:1px solid #c6c6c6;
+/*     border:1px solid #c6c6c6; */
 }
 .product_view table .length input{
-    width:44px;
+    width:40px;
     height: 30px;
-    border:none;
+    border: 1px solid #c6c6c6;
     text-align: center;
-    border-right: 1px solid #c6c6c6;
+/*     border-right: 1px solid #c6c6c6; */
 }
-.product_view table .length a{
-    overflow: hidden;
-    position: absolute;
-    right:0;
+/* .product_view table .length a{ */
+/*     overflow: hidden; */
+/*     position: absolute; */
+/*     right:0; */
 
-    height:16px;
-    width:23px;
-    color:transparent;
-}
-/* 위 아래 화살표 이미지 넣기, js로 버튼 작동 시킬것 */
-.product_view table .length a:nth-of-type(1){
-    text-align: center;
-    top:0;
-  background:url("..image/ico_up.png") no-repeat center;
-    border-bottom:1px solid #c6c6c6;
-}
-.product_view table .length a:nth-of-type(2){
-    text-align: center;
-    bottom:0;
-    background:url("image/ico_down.png") no-repeat center;
-  }
+/*     height:16px; */
+/*     width:23px; */
+/*     color:transparent; */
+/* } */
+/* /* 위 아래 화살표 이미지 넣기, js로 버튼 작동 시킬것 */ */
+/* .product_view table .length a:nth-of-type(1){ */
+/*     text-align: center; */
+/*     top:0; */
+/*   background:url("..image/ico_up.png") no-repeat center; */
+/*     border-bottom:1px solid #c6c6c6; */
+/* } */
+/* .product_view table .length a:nth-of-type(2){ */
+/*     text-align: center; */
+/*     bottom:0; */
+/*     background:url("image/ico_down.png") no-repeat center; */
+/*   } */
 
   /* select 박스 화살표 지우고, 이미지 화살표 넣기  */
 .product_view table select {

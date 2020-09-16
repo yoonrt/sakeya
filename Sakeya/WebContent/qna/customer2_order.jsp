@@ -17,11 +17,37 @@
 
 </head>
 <body>
+<style>
+.wrapper12{
+width: 1224px;
+ padding-bottom: 10px;
+ margin: 0 auto;
+}
+
+.faq_keyword {
+margin: 40px 0 0;
+width: 100%;
+height: 20px;
+padding: 12px 15px 8px;
+font-size: 13px;
+background-color: #f2f5f8;
+color: #111;
+margin-bottom: 14px;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+.list_board_sort li{
+height:46px;
+font-size:20px;
+}
+</style>
 <script type="text/javascript">
 
 </script>
+<div class ="wrapper12">
 	<div id="wrap">
-
+	
 		<div id="contents">
 			<div id="aside">
 				<h2 class="tit_cs_linkCustomerCenterMain">
@@ -30,6 +56,8 @@
 				</h2>
 				<div class="cs_snb">
 					<ul class="list_snb">
+					<li>
+					<a href="SakeyaServlet?command=index"><strong class="tit_sub">홈</strong></a></li>
 						<li><strong class="tit_sub">자주하는 질문</strong>
 							<ul class="list_snb_sub">
 								<li class="_cat05" data-cat="05"><a
@@ -688,7 +716,7 @@
 				</div>
 			</div>
 		</div>
-
+	</div>
 	</div>
 </body>
 </html>

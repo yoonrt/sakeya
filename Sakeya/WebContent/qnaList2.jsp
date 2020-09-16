@@ -105,10 +105,13 @@
 				</c:forEach>
 			</table>
 			<div id="buttons" style="float: right">
-				<input type="button" value="1:1 질문하기" class="submit"
-					onclick="location.href='SakeyaServlet?command=qna_write_form'">
-				<input type="button" value="쇼핑 계속하기" class="cancel"
-					onclick="location.href='SakeyaServlet?command=index'">
+			<button type="button" value="1:1 질문하기" class="btn btn-link" onclick="location.href='SakeyaServlet?command=qna_write_form'"> <i class="fas fa-question"></i><p>1:1 질문하기</p></button>
+				
+				
+			<button type="button" value="쇼핑 계속하기" class="btn btn-link" onclick="location.href='SakeyaServlet?command=index'">
+				 <i class="fas fa-shopping-cart"></i> <p>쇼핑 계속하기</p> </button>
+			
+				
 			</div>
 		</form>
 	</div>

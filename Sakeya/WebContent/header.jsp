@@ -70,9 +70,8 @@
 				<span class="sidebar-container">
 					<div id="sideNavid" class="sidenav">
 						<a href="javascript:void(0)" style="font-size: 30px;"
-							class="closebtn" onclick="closeNav()">&times;</a> <a href="#"><img
-							src="event1.PNG"></a> <a href="#">메뉴2</a> <a href="#">메뉴3</a> <a
-							href="#">메뉴4</a>
+							class="closebtn" onclick="closeNav()">&times;</a> <a href="#"><img src = "image/sakeyaside.png" width = "200px" height = "200px"></a>메뉴2</a> <a href="#">메뉴1</a> <a
+							href="#">메뉴2</a>
 					</div> <span style="font-size: 30px; cursor: pointer" onclick="openNav()">&#9776;</span>
 
 				</span> <span class="logo-container"> <a
