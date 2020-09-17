@@ -128,12 +128,12 @@ li {
 	<div class ="wrapper">
 	
 	<!--  상품베너  상단페이지 -->
-	<div id = "container">
-	<div id ="idx_top">
-    <img src = "image/event1.png" class="center">
+<!-- 	<div id = "container"> -->
+<!-- 	<div id ="idx_top"> -->
+<!--     <img src = "image/event1.png" class="center"> -->
     
-    </div></div>
-	
+<!--     </div></div> -->
+		<%@ include file ="banner.jsp" %>
 	
 	<div id = "front">
 <!-- 	신상품 리스트 -->

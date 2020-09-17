@@ -74,10 +74,10 @@
 <!-- </nav> -->
 
 
-<div class="notifibox text-center">
+<!-- <div class="notifibox text-center"> -->
 
-  <h3 class ="notification">청소년 보호법 제 28조에 따라 19세 미만의 미성년자 분에게는 술을 판매하지 않습니다.</h3> 
-</div>
+<!--   <h3 class ="notification">청소년 보호법 제 28조에 따라 19세 미만의 미성년자 분에게는 술을 판매하지 않습니다.</h3>  -->
+<!-- </div> -->
   
 <div class="container">
   <div class="row">

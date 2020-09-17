@@ -34,7 +34,7 @@
 
 .content-table thead .tablehead {
 	/* border-top:1px solid #009879; */
-	background-color: #1b85cf;
+	background-color: #73151a;
 	color: white;
 	text-align: center;
 	font-weight: bold;
@@ -85,37 +85,29 @@
 						<th>번호</th>
 						<th>제목</th>
 						<th>등록일</th>
-						<th>답변여부</th>
 					</tr>
 				</thead>
-				<c:forEach items="${qnaList}" var="qnaVO">
+				<c:forEach items="${eventList}" var="eventVO">
 					<tbody>
 						<tr>
-							<td>${qnaVO.qseq}</td>
+							<td>${eventVO.eseq}</td>
 							<td><a
-								href="SakeyaServlet?command=qna_view&qseq=${qnaVO.qseq}">
-									${qnaVO.subject} </a></td>
-							<td><fmt:formatDate value="${qnaVO.indate}" type="date" /></td>
-							<td><c:choose>
-									<c:when test="${qnaVO.rep==1}"> no </c:when>
-									<c:when test="${qnaVO.rep==2}"> yes </c:when>
-								</c:choose></td>
+								href="SakeyaServlet?command=board_view&eseq=${eventVO.eseq}">
+									${eventVO.evtitle} </a></td>
+							<td><fmt:formatDate value="${eventVO.indate}" type="date" /></td>
 						</tr>
 					</tbody>
 				</c:forEach>
 			</table>
 			<div id="buttons" style="float: right">
-			<button type="button" value="1:1 질문하기" class="btn btn-link" onclick="location.href='SakeyaServlet?command=qna_write_form'"> <i class="fas fa-question"></i><p>1:1 질문하기</p></button>
-				
-				
-			<button type="button" value="쇼핑 계속하기" class="btn btn-link" onclick="location.href='SakeyaServlet?command=index'">
-				 <i class="fas fa-shopping-cart"></i> <p>쇼핑 계속하기</p> </button>
-			
-				
+				<input type="button" value="글쓰기" class="submit"
+					onclick="location.href='SakeyaServlet?command=board_write_form'">
+				<input type="button" value="쇼핑 계속하기" class="cancel"
+					onclick="location.href='SakeyaServlet?command=index'">
 			</div>
 		</form>
 	</div>
-	<%@ include file = "test.jsp" %>
+	<%@ include file="test.jsp"%>
 	<%@ include file="footer.jsp"%>
 </body>
 </html>

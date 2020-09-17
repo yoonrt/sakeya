@@ -28,7 +28,7 @@
 }
 .qnatable th{
 border: 1px solid white;
-	background-color:#73151a;
+	background-color:#1b85cf;
 	color: white;
 }
 .qnatable td {
@@ -50,6 +50,7 @@ float:right;
 	<div class ="wrapper">
 	<article>
 		<h2>1:1 고객 게시판</h2> 
+		<br>
 		<h3>고객님의 질문에 대해서 운영자가 1:1 답변을 드립니다.</h3>
 		<form name="formm" method="post">
 			<table id="notice" class= "qnatable">

@@ -10,13 +10,27 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min123.css"/>
-		<link rel="stylesheet" type="text/css" href="css/custom123.css"/>		
+		<link rel="stylesheet" type="text/css" href="css/custom123.css"/>
+		
+		<style> 
+.side_nav1{
+	float: left;
+}
+.side_nav1 .nav ul .active{
+
+} 
+#aside{
+        float: left;
+        width: 190px;
+        margin-left: 105px;
+    }
+</style>		
 	</head>
 
 	<body>
 		
 	<%@ include file="header.jsp" %>
-	<%@ include file="sub_menu.jsp" %>
+	
 	<script>
  function go_cart_delete() {
 	 var count = 0;
@@ -46,18 +60,34 @@
 
  </script>
 		<div class="container-fluid breadcrumbBox text-center">	
-				<h2>Cart List</h2>
+				
 
 
-</div>		
+
 		<div class="container text-center">
 
-			<div class="col-md-5 col-sm-12">
-				<div class="bigcart"></div>
-				<h1>${sessionScope.loginUser.name}`s shopping cart</h1>
+<!-- 			<div class="col-md-5 col-sm-12"> -->
+<!-- 				<div class="bigcart"></div> -->
+<%-- 				<h1>${sessionScope.loginUser.name}`s shopping cart</h1> --%> 
 				
+<!-- 			</div> -->
+
+
+		<div class="wrapper">
+			<div id="aside">
+				<div class="side_nav1">
+					<ul class="nav nav-pills nav-stacked">
+						<li role="presentation" class="active"><a
+							href="SakeyaServlet?command=index">Home</a></li>
+						<li role="presentation"><a
+							href="SakeyaServlet?command=cart_list">장바구니</a></li>
+						<li role="presentation"><a
+							href="SakeyaServlet?command=mypage">진행중인 주문</a></li>
+						<li role="presentation"><a
+							href="SakeyaServlet?command=order_all">총 주문</a></li>
+					</ul>
+				</div>
 			</div>
-			
 			<div class="col-md-7 col-sm-12 text-left">
 				<form name = "formm" method = "post"> 
 				<input type ="hidden" value=2 name="identify">
@@ -66,6 +96,7 @@
 				<h3 style="color: red;text-align: center;"> 장바구니가 비었습니다. </h3> 
                 </c:when>
                 <c:otherwise>
+                
 				<ul>
 					<li class="row list-inline columnCaptions">
 						<span>QTY</span>
@@ -80,7 +111,7 @@
 					<li class="row">
 					    <span class="quantity">${cartVO.quantity}</span>
 						<span class="itemName">${cartVO.pname}</span>
-						<span claee="pseq">${cartVO.pseq}</span> 
+<%-- 						<span claee="pseq">${cartVO.pseq}</span>  --%>
 						<a class=""></a></a>
 						<span class="price"> <fmt:formatNumber value="${cartVO.price2*cartVO.quantity}" type="currency"/> </span>
 						
@@ -106,7 +137,7 @@
 					</li>
 					</form>
 									
-				</ul>
+			
 			</c:otherwise>
 			</c:choose>
 			</div>

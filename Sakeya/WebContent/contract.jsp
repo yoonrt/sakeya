@@ -6,6 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 <meta charset="UTF-8">
 <title>contract2 page</title>
 <style>
@@ -15,6 +16,28 @@ article .explanation {
 
 article h2 {
 	text-align: center;
+}
+
+.btn-primary1 {
+	color: #fff;
+	background-color: #c60d22;
+	border-color: #c60d22;
+	}
+	.btn-primary1:hover,
+	.btn-primary1:focus,
+	.btn-primary1.focus,
+	.btn-primary1:active,
+	.btn-primary1.active,
+	.open>.dropdown-toggle.btn-primary1 {
+	color: #fff;
+	background-color: #770914;
+	border-color: #770914;
+}
+.middle{
+	display: flex;
+	height: 30px;
+	justify-content: center;
+	align-items: center;
 }
 </style>
 
@@ -211,13 +234,12 @@ article h2 {
 
 				<br>
 				<br>
-				<div style="text-align: center;">
-				<input type="checkbox" name="okon1" id="chk1"> 약관동의
-					&nbsp; &nbsp; &nbsp; 
-					
+				<div class="middle">
+				<input type="checkbox" name="okon1" id="chk1">약관동의
 				</div>
-				<input type="submit" value="Next" class="submit"  onclick="return go_next()"
-					style="text-align:center;">
+				<div class="middle">
+				<input type="submit" value="Next" class="btn btn-primary1"  onclick="return go_next()">
+				</div>
 				
 			</form>
 <!-- 			<button><a href ="SakeyaServlet?command=index">취소</a></button> -->

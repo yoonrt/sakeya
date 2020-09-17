@@ -29,251 +29,452 @@
 <link rel="stylesheet" type="text/css" href="css/default.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="icon" type="image/png" href="images/sake.ico">
-<script type ="text/javascript" src = "js/mypage.js"></script>
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script
+	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/mypage.js"></script>
 </head>
 <body>
-<style>
-* {
-  box-sizing: border-box;
-}
- 
-html,
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  background-color: white;
-  font-family: 'Roboto', sans-serif;
-}
-.shopping-cart {
-	
-  width: 1024px;
-  margin: 0 auto;
-  background: #FFFFFF;
-  box-shadow: 1px 2px 3px 1px rgba(0,0,0,0.10); 
-  border-radius: 6px;
- 
-  display: flex;
-  flex-direction: column;
-}
-.title {
-  height: 60px;
-  border-bottom: 1px solid #E1E8EE;
-  padding: 20px 30px;
-  color: #5E6977;
-  font-size: 20px;
-  font-weight: 400;
-}
- 
-.item {
-  padding: 20px 30px;
-  height: 120px;
-  display: flex;
-}
- 
-.item:nth-child(3) {
-  border-top:  1px solid #E1E8EE;
-  border-bottom:  1px solid #E1E8EE;
-}
-.cart-buttons {
-  position: relative;
-  padding-top: 30px;
-  margin-right: 60px;
-}
-.cart-buttons .delete-btn,
-.cart-buttons .like-btn {
-  display: inline-block;
-  Cursor: pointer;
-}
-.cart-buttons .delete-btn {
-  width: 18px;
-  height: 17px;
-  background: url(&amp;quot;delete-icn.svg&amp;quot;) no-repeat center;
-}
- 
-.cart-buttons .like-btn {
-  position: absolute;
-  top: 9px;
-  left: 15px;
-  background: url('twitter-heart.png');
-  width: 60px;
-  height: 60px;
-  background-size: 2900%;
-  background-repeat: no-repeat;
-}
-.is-active {
-  animation-name: animate;
-  animation-duration: .8s;
-  animation-iteration-count: 1;
-  animation-timing-function: steps(28);
-  animation-fill-mode: forwards;
-}
- 
-@keyframes animate {
-  0%   { background-position: left;  }
-  50%  { background-position: right; }
-  100% { background-position: right; }
-}
-.cart-image {
-  margin-right: 50px;
-}
- 
-Let’s add some basic style to  product name and description.
-.description {
-  padding-top: 10px;
-  padding-right: 30px;
-  margin-right: 50px;
-  width: 120px;
-}
- 
-.description span {
-  display: block;
-  font-size: 14px;
-  color: #43484D;
-  font-weight: 400;
-}
- 
-.description span:first-child {
-  margin-bottom: 5px;
-}
-.description span:last-child {
-  font-weight: 300;
-  margin-top: 8px;
-  color: #86939E;
-}
-.quantity {
-  padding-top: 20px;
-  margin-right: 60px;
-  text-align:center;
-  padding-left: 150px;
-}
-.quantity input {
-  -webkit-appearance: none;
-  border: none;
-  text-align: center;
-  width: 32px;
-  font-size: 16px;
-  color: #43484D;
-  font-weight: 300;
-}
- 
-button[class*=btn] {
-  width: 30px;
-  height: 30px;
-  background-color: #E1E8EE;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
+	<style>
+.cartwrapper {
+	padding-top: 50px;
+	margin: 0 auto;
+	width: 1080px;
+	padding-bottom: 10px;
 }
 
- 
-button:focus,
-input:focus {
-  outline:0;
+.product-image {
+	float: left;
+	width: 20%;
 }
-.total-price {
-	
-  width: 83px;
-  padding-top: 27px;
-  padding-left:150px;
-  text-align: center;
-  font-size: 16px;
-  color: #43484D;
-  font-weight: 300;
+
+.product-details {
+	float: left;
+	width: 37%;
 }
-@media (max-width: 800px) {
-  .shopping-cart {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-  }
-  .item {
-    height: auto;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .image img {
-    width: 50%;
-  }
-  .image,
-  .quantity,
-  .description {
-    width: 100%;
-    text-align: center;
-    margin: 6px 0;
-  }
-  .cart-buttons {
-    margin-right: 20px;
-  }
+
+.product-price {
+	float: left;
+	width: 12%;
+}
+
+.product-quantity {
+	float: left;
+	width: 10%;
+}
+
+.product-removal {
+	float: left;
+	width: 9%;
+}
+
+.product-line-price {
+	float: left;
+	width: 12%;
+	text-align: right;
+}
+
+/* This is used as the traditional .clearfix class */
+.group:before, .shopping-cart:before, .column-labels:before, .product:before,
+	.totals-item:before, .group:after, .shopping-cart:after, .column-labels:after,
+	.product:after, .totals-item:after {
+	content: '';
+	display: table;
+}
+
+.group:after, .shopping-cart:after, .column-labels:after, .product:after,
+	.totals-item:after {
+	clear: both;
+}
+
+.group, .shopping-cart, .column-labels, .product, .totals-item {
+	zoom: 1;
+}
+
+/* Apply clearfix in a few places */
+/* Apply dollar signs */
+.product .product-price:before, .product .product-line-price:before,
+/* 	.totals-value:before { */
+/* 	content: '$'; */
+/* } */
+
+/* Body/Header stuff */
+body {
+	padding: 0px 30px 30px 20px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+		"Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 100;
+}
+
+h1 {
+	font-weight: 100;
+}
+
+label {
+	color: #aaa;
+}
+
+.shopping-cart {
+	margin-top: -45px;
+}
+
+/* Column headers */
+.column-labels label {
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+	border-bottom: 1px solid #eee;
+}
+
+.column-labels .product-image, .column-labels .product-details,
+	.column-labels .product-removal {
+	text-indent: -9999px;
+}
+
+/* Product entries */
+.product {
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #eee;
+}
+
+.product .product-image {
+	text-align: center;
+}
+
+.product .product-image img {
+	width: 100px;
+}
+
+.product .product-details .product-title {
+	margin-right: 20px;
+	font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
+}
+
+.product .product-details .product-description {
+	margin: 5px 20px 5px 0;
+	line-height: 1.4em;
+}
+
+.product .product-quantity input {
+	width: 40px;
+}
+
+.product .remove-product {
+	border: 0;
+	padding: 4px 8px;
+	background-color: #c66;
+	color: #fff;
+	font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
+	font-size: 12px;
+	border-radius: 3px;
+}
+
+.product .remove-product:hover {
+	background-color: #a44;
+}
+
+/* Totals section */
+.totals .totals-item {
+	float: right;
+	clear: both;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.totals .totals-item label {
+	float: left;
+	clear: both;
+	width: 79%;
+	text-align: right;
+}
+
+.totals .totals-item .totals-value {
+	float: right;
+	width: 21%;
+	text-align: right;
+}
+
+.totals .totals-item-total {
+	font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
+}
+
+.checkout {
+	float: right;
+	border: 0;
+	margin-top: 20px;
+	padding: 6px 25px;
+	background-color: #6b6;
+	color: #fff;
+	font-size: 25px;
+	border-radius: 3px;
+}
+
+.checkout:hover {
+	background-color: #494;
+}
+
+/* Make adjustments for tablet */
+@media screen and (max-width: 650px) {
+	.shopping-cart {
+		margin: 0;
+		padding-top: 20px;
+		border-top: 1px solid #eee;
+	}
+	.column-labels {
+		display: none;
+	}
+	.product-image {
+		float: right;
+		width: auto;
+	}
+	.product-image img {
+		margin: 0 0 10px 10px;
+	}
+	.product-details {
+		float: none;
+		margin-bottom: 10px;
+		width: auto;
+	}
+	.product-price {
+		clear: both;
+		width: 70px;
+	}
+	.product-quantity {
+		width: 100px;
+	}
+	.product-quantity input {
+		margin-left: 20px;
+	}
+	.product-quantity:before {
+		content: 'x';
+	}
+	.product-removal {
+		width: auto;
+	}
+	.product-line-price {
+		float: right;
+		width: 70px;
+	}
+}
+/* Make more adjustments for phone */
+@media screen and (max-width: 350px) {
+	.product-removal {
+		float: right;
+	}
+	.product-line-price {
+		float: right;
+		clear: left;
+		width: auto;
+		margin-top: 10px;
+	}
+	.product .product-line-price:before {
+		content: 'Item Total: $';
+	}
+	.totals .totals-item label {
+		width: 60%;
+	}
+	.totals .totals-item .totals-value {
+		width: 40%;
+	}
+}
+
+/* Make more adjustments for phone */
+@media screen and (max-width: 350px) {
+	.product-removal {
+		float: right;
+	}
+	.product-line-price {
+		float: right;
+		clear: left;
+		width: auto;
+		margin-top: 10px;
+	}
+	.product .product-line-price:before {
+		content: 'Item Total: $';
+	}
+	.totals { .totals-item { label { width:60%;
+		
+	}
+	.totals-value {
+		width: 40%;
+	}
+}
+}
 }
 </style>
-<div class="shopping-cart">
-  <!-- Title -->
-  <div class="title">
-    	장바구니
-  </div>
- 
-  <!-- Product #1 -->
-  <form name="formm" method="post">
-  <c:choose>
-				<c:when test="${cartList.size() == 0}">
-					<h3 style="color: red; text-align: center;">장바구니가 비었습니다.</h3>
-				</c:when>
-				<c:otherwise>
-				
-					<c:forEach items="${cartList}" var="cartVO">
-					
-					<a href="SakeyaServlet?command=product_detail&pseq=${cartVO.pseq}">
-					<input type="checkbox" name="cseq" value= "${cartVO.cseq}">
-  <div class="item">
-    <div class="cart-buttons">
-      <a href="#" class="fas fa-trash-alt" onclick="go_cart_delete()"></a>
-<!--       <span class="like-btn"></span> -->
-    </div>
- 	<input type="hidden" name="cseq" value="${cartVO.cseq}">
-    <div class="cart-image">
-     <a href="SakeyaServlet?command=product_detail&pseq=${cartVO.pseq}"> <img src ="image/${cartVO.image }" ></a>
-    </div>
- 
-    <div class="description">
-    <a href="SakeyaServlet?command=product_detail&pseq=${cartVO.pseq}"> 
-      <span>${cartVO.pname}</span>
-      </a>
-      <span><fmt:formatDate value="${cartVO.indate}" type="date" /></span>
-    </div>
- 
-    <div class="quantity">
-      <button class="plus-btn" type="button" name="button" onclick='javascript_:change(1);'>
-        <a class="fas fa-plus" onclick='javascript_:change(1);'></a>
-      </button>
-      <input type="text" name="name" value="${cartVO.quantity}">
-      <button class="minus-btn" type="button" name="button">
-        <i class="fas fa-minus"></i>
-      </button>
-    </div>
- 
-    <div class="total-price">
-    <fmt:formatNumber value="${cartVO.price2*cartVO.quantity}" type="currency" />
-	</div>
-  </div>
-  	</c:forEach>
-  </c:otherwise>
-			</c:choose>
-  
-  <div id="buttons" style="float: right">
-				<input type="button" value="쇼핑 계속하기" class="cancel"
-					onclick="location.href='SakeyaServlet?command=index'">
-				<c:if test="${cartList.size() != 0}">
-					<input type="button" value="주문하기" class="submit"
-						onclick="go_order_insert()">
-				</c:if>
+	<div class="cartwrapper">
+<!-- 		<h1>Shopping Cart</h1> -->
+
+		<div class="shopping-cart">
+	<form name="formm" method="post">
+				<input type="hidden" value=2 name="identify">
+				<c:choose>
+				<c:when test= "${cartList.size() == 0}">
+				<h3 style="color: red;text-align: center;"> 장바구니가 비었습니다. </h3> 
+                </c:when>
+                <c:otherwise>
+			
+			<div class="column-labels">
+ <!-- 				<label class="product-image">Image</label>  -->
+			<label class="product-price" style="width: 400px;">Product</label> <label
+					class="product-price">Price</label> <label class="product-quantity">Quantity</label>
+				<label class="product-removal">Remove</label> <label
+					class="product-line-price">Total</label>
 			</div>
-</form>
-</div>
 
-<!-- <script src = "js/mypage.js"> -->
+				<div class="product">
+					<c:forEach items="${cartList}" var="cartVO">
+			
+				 	
+					<div class="product-image">
+<!-- 						<img src="images/nike.jpg"> -->
+					</div>
+					<div class="product-details">
+						<div class="product-title"> <a href="SakeyaServlet?command=product_detail&pseq=${cartVO.pseq}">${cartVO.pname}</a></div>
+						<p class="product-description"><fmt:formatDate value="${cartVO.indate}" type="date" /></p>
+					</div>
+					<div class="product-price" id="ticket_price">${cartVO.price2}원</div>
+					<div class="product-quantity">
+						<input type="number" value="${cartVO.quantity}" min="1" style="width:30px" id="num" oninput="calc()">
+					</div>
+					<div class="product-removal">
+						<input type="checkbox" name="cseq" value= "${cartVO.cseq}">
+					</div>
+					<div class="product-line-price"><b id ="total">${cartVO.price2}원</b></div>
+				</div>
+
+ 			</c:forEach>
+				<div class="totals">
+					<div class="totals-item">
+						<label>Subtotal</label>
+						<div class="totals-value" id="cart-subtotal"><fmt:formatNumber value="${cartVO.price2}" type="currency"/></div>
+					</div>
+					<div class="totals-item">
+						<label>배송비</label>
+						<div class="totals-value" id="cart-tax">0</div>
+					</div>
+<!-- 					<div class="totals-item"> -->
+<!-- 						<label>Shipping</label> -->
+<!-- 						<div class="totals-value" id="cart-shipping">15.00</div> -->
+<!-- 					</div> -->
+					<div class="totals-item totals-item-total">
+						<label>Grand Total</label>
+						<div class="totals-value" id="cart-total"><fmt:formatNumber value="${totalPrice}"
+								type="currency" /></div>
+					</div>
+				</div>
+				</c:otherwise>
+				</c:choose>
+
+				<c:if test= "${cartList.size() != 0}">
+						<span class="order"> <a class="text-center"  class="submit" onclick="go_order_insert()">ORDER</a></span>
+						</c:if>
+						<span class="order"> <a class="text-center" onclick="go_cart_delete()">Delete</a></span>
+					   
+					    
+					
+					</form>
+		</div>
+	</div>
 
 
-<!-- </script> -->
+	<script>
+	function calc() 
+    {
+      var price = document.getElementById("ticket_price").innerHTML;
+      var noTickets = document.getElementById("num").value;
+      var total = parseFloat(price) * noTickets
+      if (!isNaN(total))
+        document.getElementById("total").innerHTML = total+"원"
+    }
+
+// 	$(document).ready(function() {
+	 
+// 	/* Set rates + misc */
+// 	var taxRate = 0.05;
+// 	var shippingRate = 15.00; 
+// 	var fadeTime = 300;
+	 
+	 
+// 	/* Assign actions */
+// 	$('.product-quantity input').change( function() {
+// 	  updateQuantity(this);
+// 	});
+	 
+// 	$('.product-removal button').click( function() {
+// 	  removeItem(this);
+// 	});
+	 
+	 
+// 	/* Recalculate cart */
+// 	function recalculateCart()
+// 	{
+// 	  var subtotal = 0;
+	   
+// 	  /* Sum up row totals */
+// 	  $('.product').each(function () {
+// 	    subtotal += parseFloat($(this).children('.product-line-price').text());
+// 	  });
+	   
+// 	  /* Calculate totals */
+// 	  var tax = subtotal * taxRate;
+// 	  var shipping = (subtotal > 0 ? shippingRate : 0);
+// 	  var total = subtotal + tax + shipping;
+	   
+// 	  /* Update totals display */
+// 	  $('.totals-value').fadeOut(fadeTime, function() {
+// 	    $('#cart-subtotal').html(subtotal.toFixed(2));
+// 	    $('#cart-tax').html(tax.toFixed(2));
+// 	    $('#cart-shipping').html(shipping.toFixed(2));
+// 	    $('#cart-total').html(total.toFixed(2));
+// 	    if(total == 0){
+// 	      $('.checkout').fadeOut(fadeTime);
+// 	    }else{
+// 	      $('.checkout').fadeIn(fadeTime);
+// 	    }
+// 	    $('.totals-value').fadeIn(fadeTime);
+// 	  });
+// 	}
+	 
+	 
+// 	/* Update quantity */
+// 	function updateQuantity(quantityInput)
+// 	{
+// 	  /* Calculate line price */
+// 	  var productRow = $(quantityInput).parent().parent();
+// 	  var price = parseFloat(productRow.children('.product-price').text());
+// 	  var quantity = $(quantityInput).val();
+// 	  var linePrice = price * quantity;
+	   
+// 	  /* Update line price display and recalc cart totals */
+// 	  productRow.children('.product-line-price').each(function () {
+// 	    $(this).fadeOut(fadeTime, function() {
+// 	      $(this).text(linePrice.toFixed(2));
+// 	      recalculateCart();
+// 	      $(this).fadeIn(fadeTime);
+// 	    });
+// 	  });  
+// 	}
+	 
+	 
+// 	/* Remove item from cart */
+// 	function removeItem(removeButton)
+// 	{
+// 	  /* Remove row from DOM and recalc cart total */
+// 	  var productRow = $(removeButton).parent().parent();
+// 	  productRow.slideUp(fadeTime, function() {
+// 	    productRow.remove();
+// 	    recalculateCart();
+// 	  });
+// 	}
+	 
+// 	});
+	 
+
+	 </script>
 </body>
 </html>

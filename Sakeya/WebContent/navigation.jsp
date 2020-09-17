@@ -33,7 +33,7 @@
                 </ul>
             </li>
             <li><a href="SakeyaServlet?command=catagory&kind=9">술잔/술병(酒器等)</a></li>
-            <li><a href="#">이벤트</a></li>
+            <li><a href="SakeyaServlet?command=event_List">이벤트</a></li>
             <li><a href="#">공지사항</a></li>
         </ul>
     </nav>

@@ -64,7 +64,7 @@
 								</ul></li>
 							<li><strong class="tit_sub">고객센터</strong>
 								<ul class="list_snb_sub">
-									<li><a href=""SakeyaServlet?command=qna_list"" class="link_snb_sub"
+									<li><a href="SakeyaServlet?command=qna_list" class="link_snb_sub"
 										spcid="MYCJ____left__zzimall__">1:1 문의내역</a></li>
 									<!-- <li>
                                     <a href="#" class="link_snb_sub" spcid="MYCJ____left__tvpush__">공지사항</a>

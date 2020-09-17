@@ -16,6 +16,7 @@ import com.sakeya.admin.controller.action.AdminQnaDetailAction;
 import com.sakeya.admin.controller.action.AdminQnaListAction;
 import com.sakeya.admin.controller.action.AdminQnaResaveAction;
 import com.sakeya.controller.action.Action;
+import com.sakeya.controller.action.BoardListAction;
 import com.sakeya.controller.action.CartDeleteAction;
 import com.sakeya.controller.action.CartInsertAction;
 import com.sakeya.controller.action.CartListAction;
@@ -40,7 +41,6 @@ import com.sakeya.controller.action.OrderInsertAction;
 import com.sakeya.controller.action.OrderListAction;
 import com.sakeya.controller.action.ProductDetailAction;
 import com.sakeya.controller.action.ProductKindAction;
-
 import com.sakeya.controller.action.QnaListAction;
 import com.sakeya.controller.action.QnaViewAction;
 import com.sakeya.controller.action.QnaWriteAction;
@@ -100,9 +100,7 @@ public class ActionFactory {
 			 action = new OrderDetailAction();
 		 } else if (command.equals("order_all")) {
 			 action = new OrderAllAction();
-		 } 
-		 
-		else if (command.equals("customer1")) {
+		 } else if (command.equals("customer1")) {
 			 action = new OftenQuestionsAction1();
 		 }else if (command.equals("customer2")) {
 			 action = new OftenQuestionsAction2();
@@ -122,7 +120,14 @@ public class ActionFactory {
 			 action = new QnaWriteAction();
 		 }else if (command.equals("qna_view")) {
 			 action = new QnaViewAction();
-		 } 
+		  } else if (command.equals("event_List")) {
+	        	action = new BoardListAction();
+	        }
+//		 } else if (command.equals("board_write_form")) {
+//	        	action = new BoardWriteFormAction();
+//	      } else if (command.equals("board_writeAdmin")) {
+//	        	action = new BoardWriteAction();
+	      
 		
 		 if(command.equals("admin_login_form")){
 	        	action = new AdminIndexAction();

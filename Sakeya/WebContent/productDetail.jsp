@@ -192,8 +192,8 @@
         <div id ="container"><div id = "idx_bottom">
 	    </div></div>
         
-        
-        <%@ include file ="footer.jsp" %>
+        	<%@ include file = "test.jsp" %>
+		<%@ include file ="footer.jsp" %>
         <c:out value ="${param.pseq }"/>
    </body>
    

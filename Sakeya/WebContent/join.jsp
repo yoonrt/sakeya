@@ -211,7 +211,7 @@
 <body>
     <%-- <%@ include file ="navigation.jsp" %> --%>
     <div class="container">
-        <span class="logo-container"> <a href="SakeyaServlet?command=index"> <img src="image/sakeyalogo2.png" width="230px" height="110px" onError="this.style.visibility='hidden'">
+        <span class="logo-container"> <a href="SakeyaServlet?command=index"> <img src="image/sakeyalogo.png" width="230px" height="110px" onError="this.style.visibility='hidden'">
             </a>
         </span>
         <form id="join" action="SakeyaServlet?command=join" method="post" name="formm">
